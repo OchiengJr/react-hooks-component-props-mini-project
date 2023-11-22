@@ -2,8 +2,7 @@
 import React from 'react';
 import Article from "./Article";
 
-const ArticleList = (props) => {
-    const { posts } = props;
+const ArticleList = ({posts}) => {
     
     return (
         <main>
