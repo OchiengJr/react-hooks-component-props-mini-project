@@ -1,18 +1,17 @@
-// ArticleList component
 import React from 'react';
 import Article from "./Article";
 
-const ArticleList = ({posts}) => {
-    
+const ArticleList = ({ posts }) => {
     return (
         <main>
-            {posts && posts.map((article) => (
+            {/* Ensure that posts is not null or undefined before mapping */}
+            {posts && posts.map(({ id, title, date, preview, minutes }) => (
                 <Article 
-                    key={article.id} 
-                    title={article.title} 
-                    date={article.date} 
-                    preview={article.preview}
-                    minutes = {article.minutes}
+                    key={id} 
+                    title={title} 
+                    date={date} 
+                    preview={preview}
+                    minutes={minutes}
                 />
             ))}
         </main>

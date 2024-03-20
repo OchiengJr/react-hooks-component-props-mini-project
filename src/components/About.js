@@ -5,21 +5,23 @@ const About = ({ image, altname, about }) => {
   return (
     <aside>
       <img src={image} alt={altname} />
-      {/* If there is something in the about then create a paragraph with the about */}
+      {/* If there is content in the 'about' prop, render a paragraph */}
       {about && <p>{about}</p>}
     </aside>
   );
 };
 
+// PropTypes for type checking
 About.propTypes = {
   image: PropTypes.string,
   altname: PropTypes.string,
   about: PropTypes.string,
 };
 
+// Default props to provide fallback values
 About.defaultProps = {
   image: "https://via.placeholder.com/215",
-  altname: "blog logo",
+  altname: "Placeholder Image",
   about: "",
 };
 

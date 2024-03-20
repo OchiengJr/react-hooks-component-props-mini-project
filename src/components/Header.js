@@ -1,13 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-const Header = ({name}) => {
+const Header = ({ name }) => {
   return (
-    <>
-        <header>
-          <h1>{!name ? "" : name}</h1>
-        </header>
-    </>
-  )
+    <header>
+      <h1>{name || "Default Name"}</h1>
+    </header>
+  );
 }
 
-export default Header
+Header.defaultProps = {
+  name: "Default Name"
+};
+
+export default Header;
